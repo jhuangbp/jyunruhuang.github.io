@@ -93,13 +93,16 @@ Update content in the section components under `src/components`:
 
 Static files referenced by the site (resume, headshot, reports, logos) live in `docs/`, which is configured as Vite's `publicDir`.
 
-## Deployment
+## Deployment (GitHub Pages)
 
-This project includes a `render.yaml` for a Render static site deployment.
+This project ships with a GitHub Actions workflow that builds and deploys the Vite site
+to GitHub Pages whenever you push to `main`.
 
 1. Push the repository to GitHub.
-2. Create a new Render **Static Site** and connect the repo.
-3. Build Command: `npm install && npm run build`
-4. Publish Directory: `dist`
+2. In the repo settings, enable **Pages** and set the source to **GitHub Actions**.
+3. Push to `main` to trigger the workflow.
 
-Alternatively, use the provided `render.yaml` for automated setup.
+### Notes
+
+- The workflow sets `BASE_PATH` to `/<repo-name>/` so project pages resolve assets correctly.
+- If you are deploying to `username.github.io` (root domain), set `BASE_PATH` to `/` or remove the env override.
