@@ -1,0 +1,138 @@
+.experience {
+  background: var(--bg-white);
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+}
+
+.experience-marker {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 0 0 3px var(--primary-color);
+}
+
+.experience-content {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-content:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.experience-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.experience-position {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.experience-company {
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-bullets li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.experience-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    align-items: flex-start;
+  }
+
+  .experience-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-item {
+    padding-left: 2rem;
+  }
+
+  .experience-marker {
+    left: -1.25rem;
+  }
+
+  .experience-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
