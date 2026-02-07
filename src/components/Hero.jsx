@@ -31,6 +31,12 @@ const Hero = () => {
               <span className="hero-subtitle">Boston University MSBA | Credit Risk Analyst @ CTBC Bank</span>
             </h1>
 
+            <div className="hero-badges">
+              <span>Risk Modeling</span>
+              <span>Business Analytics</span>
+              <span>Machine Learning</span>
+            </div>
+
             <p className="hero-description">
               <span className="hero-description-line">3+ years of banking credit risk modeling experience</span>
               <span className="hero-description-line">
@@ -67,6 +73,21 @@ const Hero = () => {
               >
                 LinkedIn
               </a>
+            </div>
+
+            <div className="hero-stats">
+              <div>
+                <span className="stat-value">3+ Years</span>
+                <span className="stat-label">Credit risk analytics</span>
+              </div>
+              <div>
+                <span className="stat-value">1 Patent</span>
+                <span className="stat-label">Geospatial model</span>
+              </div>
+              <div>
+                <span className="stat-value">MSBA 2026</span>
+                <span className="stat-label">Boston University</span>
+              </div>
             </div>
           </div>
         </div>

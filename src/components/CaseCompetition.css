@@ -7,6 +7,14 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-competition-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 .case-competition-body {
