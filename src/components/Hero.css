@@ -8,6 +8,16 @@
     linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
   color: white;
   padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.18), transparent 55%);
+  pointer-events: none;
 }
 
 .hero-container {
@@ -36,6 +46,7 @@
   object-fit: cover;
   border: 6px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.5);
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-text {
@@ -123,7 +134,7 @@
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -157,10 +168,16 @@
 }
 
 .hero-stats div {
-  background: rgba(15, 23, 42, 0.35);
+  background: rgba(15, 23, 42, 0.45);
   padding: 1rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-stats div:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .stat-value {
@@ -172,6 +189,52 @@
 .stat-label {
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+.hero-scroll {
+  margin-top: 2rem;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-scroll:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero-scroll-arrow {
+  animation: bounce 1.8s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }
 
 @media (max-width: 968px) {
@@ -200,6 +263,10 @@
   .hero-stats {
     grid-template-columns: 1fr;
   }
+
+  .hero-scroll {
+    align-self: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -218,5 +285,12 @@
   .hero-image {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-scroll-arrow {
+    animation: none;
   }
 }
