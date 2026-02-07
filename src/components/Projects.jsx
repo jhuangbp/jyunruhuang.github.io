@@ -73,7 +73,7 @@ const Projects = () => {
           storytelling, and deployment experience.
         </p>
 
-        <div className="project-filters" role="group" aria-label="Filter projects">
+        <div className="project-filters" role="tablist" aria-label="Filter projects">
           {filters.map((filter) => (
             <button
               key={filter}

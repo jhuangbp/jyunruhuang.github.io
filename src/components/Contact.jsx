@@ -17,13 +17,12 @@ const Contact = () => {
   }
 
   const handleCopyEmail = async () => {
-    const email = 'jhuangbp@bu.edu';
     try {
-      await navigator.clipboard.writeText(email);
-      setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000);
+      await navigator.clipboard.writeText('jhuangbp@bu.edu')
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
     } catch {
-      window.location.href = `mailto:${email}`;
+      window.location.href = 'mailto:jhuangbp@bu.edu'
     }
   }
 

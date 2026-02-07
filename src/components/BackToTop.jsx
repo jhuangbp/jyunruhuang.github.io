@@ -6,25 +6,22 @@ const BackToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 400)
+      setIsVisible(window.scrollY > 420)
     }
-    window.addEventListener('scroll', handleScroll)
+
     handleScroll()
+    window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  if (!isVisible) {
-    return null
-  }
 
   return (
     <button
       type="button"
-      className="back-to-top"
+      className={`back-to-top ${isVisible ? 'visible' : ''}`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      aria-label="Scroll back to top"
+      aria-label="Back to top"
     >
-      ↑
+      Top
     </button>
   )
 }

@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 
+const NAV_ITEMS = [
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'education', label: 'Education' },
+  { id: 'case-competition', label: 'Case Competition' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'certificates', label: 'Certificates' },
+  { id: 'contact', label: 'Contact' }
+]
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +23,28 @@ const Navbar = () => {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = NAV_ITEMS.map((item) => document.getElementById(item.id)).filter(Boolean)
+    if (sections.length === 0) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-30% 0px -55% 0px', threshold: 0.1 }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
   }, [])
 
   const scrollToSection = (id) => {
@@ -34,14 +68,15 @@ const Navbar = () => {
         </div>
         
         <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          <li onClick={() => scrollToSection('about')}>About</li>
-          <li onClick={() => scrollToSection('projects')}>Projects</li>
-          <li onClick={() => scrollToSection('experience')}>Experience</li>
-          <li onClick={() => scrollToSection('education')}>Education</li>
-          <li onClick={() => scrollToSection('case-competition')}>Case Competition</li>
-          <li onClick={() => scrollToSection('skills')}>Skills</li>
-          <li onClick={() => scrollToSection('certificates')}>Certificates</li>
-          <li onClick={() => scrollToSection('contact')}>Contact</li>
+          {NAV_ITEMS.map((item) => (
+            <li
+              key={item.id}
+              className={activeSection === item.id ? 'active' : ''}
+              onClick={() => scrollToSection(item.id)}
+            >
+              {item.label}
+            </li>
+          ))}
         </ul>
 
         <button className="navbar-cv-btn" onClick={downloadCV}>
