@@ -9,6 +9,7 @@ import CaseCompetition from './components/CaseCompetition'
 import Skills from './components/Skills'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
+import BackToTop from './components/BackToTop'
 import './App.css'
 
 function App() {
@@ -25,18 +26,51 @@ function App() {
     return () => controller.abort()
   }, [])
 
+  useEffect(() => {
+    const revealElements = Array.from(document.querySelectorAll('[data-reveal]'))
+    if (revealElements.length === 0) {
+      return undefined
+    }
+
+    revealElements.forEach((element, index) => {
+      element.style.setProperty('--reveal-delay', `${Math.min(index * 70, 320)}ms`)
+    })
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.16 }
+    )
+
+    revealElements.forEach((element) => observer.observe(element))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="App">
+      <a className="skip-link" href="#about">
+        Skip to main content
+      </a>
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Education />
-      <CaseCompetition />
-      <Skills />
-      <Certificates />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Education />
+        <CaseCompetition />
+        <Skills />
+        <Certificates />
+        <Contact />
+      </main>
+      <BackToTop />
     </div>
   )
 }

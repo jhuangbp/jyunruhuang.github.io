@@ -1,73 +1,78 @@
 import React from 'react'
+import { withBase } from '../utils/assetPath'
 import './Hero.css'
 
 const Hero = () => {
+  const highlights = [
+    { value: '3+', label: 'Years in banking credit risk' },
+    { value: '200+', label: 'Teams surpassed in healthcare case' },
+    { value: 'Top 10', label: 'AUC ranking in Humana-Mays 2024' }
+  ]
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (!element) {
+      return
     }
-  }
 
-  const downloadCV = () => {
-    window.open('/JyunRu_Huang_Resume.pdf', '_blank')
+    const targetTop = element.offsetTop - 80
+    window.scrollTo({ top: targetTop, behavior: 'smooth' })
   }
 
   return (
     <section id="hero" className="hero">
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-image-wrapper">
-            <img 
-              src="/JyunRu_Huang_Headshot.jpg" 
-              alt="JyunRu Huang" 
-              className="hero-image"
-            />
+      <div className="hero-inner">
+        <aside className="hero-profile card" data-reveal>
+          <img src={withBase('JyunRu_Huang_Headshot.jpg')} alt="JyunRu Huang" className="hero-image" />
+          <div className="hero-profile-content">
+            <p className="hero-profile-label">Currently in Boston, MA</p>
+            <p className="hero-profile-copy">Open to data analytics, business analytics, and risk modeling roles.</p>
           </div>
-          
-          <div className="hero-text">
-            <h1 className="hero-title">
-              <span className="hero-name">JyunRu Huang</span>
-              <span className="hero-subtitle">Boston University MSBA | Credit Risk Analyst @ CTBC Bank</span>
-            </h1>
+        </aside>
 
-            <p className="hero-description">
-              <span className="hero-description-line">3+ years of banking credit risk modeling experience</span>
-              <span className="hero-description-line">
-                Formal training in analytics, machine learning, and deep learning
-              </span>
-              <span className="hero-description-line hero-description-nowrap">
-                Seeking opportunities in data analytics, business analytics, or risk management
-              </span>
-            </p>
-            
-            <div className="hero-buttons">
-              <button className="btn btn-primary" onClick={downloadCV}>
-                Download CV
-              </button>
-              <button 
-                className="btn btn-secondary" 
-                onClick={() => scrollToSection('contact')}
-              >
-                Contact Me
-              </button>
-              <a 
-                href="https://github.com/jhuangbp" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-              >
-                GitHub
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/jyun-ru-huang-tw/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-              >
-                LinkedIn
-              </a>
-            </div>
+        <div className="hero-content" data-reveal>
+          <p className="hero-eyebrow">Business Analytics | Credit Risk Modeling</p>
+          <h1 className="hero-title">JyunRu Huang</h1>
+          <p className="hero-subtitle">M.S. in Business Analytics, Boston University</p>
+          <p className="hero-description">
+            Credit risk analyst with formal machine learning training and hands-on model delivery in banking,
+            healthcare analytics, and multimodal deep learning.
+          </p>
+
+          <div className="hero-actions">
+            <a
+              className="hero-btn hero-btn-primary"
+              href={withBase('JyunRu_Huang_Resume.pdf')}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Resume
+            </a>
+            <button type="button" className="hero-btn hero-btn-secondary" onClick={() => scrollToSection('projects')}>
+              Explore Projects
+            </button>
+            <button type="button" className="hero-btn hero-btn-ghost" onClick={() => scrollToSection('contact')}>
+              Contact
+            </button>
+          </div>
+
+          <div className="hero-social-links">
+            <a href="https://github.com/jhuangbp" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jyun-ru-huang-tw/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a href="mailto:jhuangbp@bu.edu">jhuangbp@bu.edu</a>
+          </div>
+
+          <div className="hero-highlights">
+            {highlights.map((item) => (
+              <article key={item.label} className="hero-highlight card" data-reveal>
+                <p className="hero-highlight-value">{item.value}</p>
+                <p className="hero-highlight-label">{item.label}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
