@@ -14,11 +14,13 @@
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .skill-category:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 .skill-category-title {
@@ -37,13 +39,13 @@
 }
 
 .skill-tag {
-  background: var(--bg-light);
+  background: rgba(15, 23, 42, 0.04);
   color: var(--text-dark);
   padding: 0.6rem 1.2rem;
   border-radius: 25px;
   font-weight: 500;
   font-size: 0.95rem;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
@@ -59,4 +61,3 @@
     grid-template-columns: 1fr;
   }
 }
-

@@ -9,6 +9,7 @@ import CaseCompetition from './components/CaseCompetition'
 import Skills from './components/Skills'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
+import BackToTop from './components/BackToTop'
 import './App.css'
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Skills />
       <Certificates />
       <Contact />
+      <BackToTop />
     </div>
   )
 }

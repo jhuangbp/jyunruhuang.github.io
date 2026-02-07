@@ -5,15 +5,18 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --text-dark: #1f2937;
-  --text-light: #6b7280;
-  --bg-light: #f9fafb;
+  --primary-color: #3b82f6;
+  --secondary-color: #1d4ed8;
+  --accent-color: #f97316;
+  --text-dark: #0f172a;
+  --text-light: #475569;
+  --bg-light: #f8fafc;
   --bg-white: #ffffff;
-  --border-color: #e5e7eb;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --bg-glass: rgba(255, 255, 255, 0.72);
+  --border-color: rgba(148, 163, 184, 0.4);
+  --shadow: 0 18px 45px -30px rgba(15, 23, 42, 0.5);
+  --shadow-lg: 0 30px 60px -35px rgba(15, 23, 42, 0.65);
+  --glow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 body {
@@ -24,6 +27,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-dark);
   line-height: 1.6;
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.08), transparent 45%),
+    var(--bg-light);
 }
 
 html {
@@ -41,14 +47,67 @@ button {
 }
 
 section {
-  padding: 80px 20px;
-  max-width: 1200px;
+  padding: 96px 0;
+  scroll-margin-top: 96px;
+}
+
+.section-container {
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 999px;
+}
+
+.section-eyebrow {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--glow);
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 20px;
+    padding: 72px 0;
   }
 }
-

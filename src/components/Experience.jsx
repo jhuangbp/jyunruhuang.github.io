@@ -47,31 +47,37 @@ const Experience = () => {
 
   return (
     <section id="experience" className="experience">
-      <h2 className="section-title">Experience</h2>
-      <div className="experience-timeline">
-        {experiences.map((exp, index) => (
-          <div key={exp.id} className="experience-item">
-            <div className="experience-marker"></div>
-            <div className="experience-content">
-              <div className="experience-header">
-                <img className="experience-logo" src={exp.logo} alt={exp.logoAlt} />
-                <div className="experience-header-text">
-                  <h3 className="experience-position">{exp.position}</h3>
-                  <span className="experience-company">{exp.company}</span>
+      <div className="section-container">
+        <p className="section-eyebrow">Career</p>
+        <h2 className="section-title">Experience</h2>
+        <p className="section-subtitle">
+          Credit risk roles focused on predictive modeling, geospatial analytics, and stakeholder-ready insights.
+        </p>
+        <div className="experience-timeline">
+        {experiences.map((exp) => (
+            <div key={exp.id} className="experience-item">
+              <div className="experience-marker"></div>
+              <div className="experience-content">
+                <div className="experience-header">
+                  <img className="experience-logo" src={exp.logo} alt={exp.logoAlt} />
+                  <div className="experience-header-text">
+                    <h3 className="experience-position">{exp.position}</h3>
+                    <span className="experience-company">{exp.company}</span>
+                  </div>
                 </div>
+                <div className="experience-meta">
+                  <span className="experience-period">{exp.period}</span>
+                  <span className="experience-location">{exp.location}</span>
+                </div>
+                <ul className="experience-bullets">
+                  {exp.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
-              <div className="experience-meta">
-                <span className="experience-period">{exp.period}</span>
-                <span className="experience-location">{exp.location}</span>
-              </div>
-              <ul className="experience-bullets">
-                {exp.bullets.map((bullet, bulletIndex) => (
-                  <li key={bulletIndex}>{bullet}</li>
-                ))}
-              </ul>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
