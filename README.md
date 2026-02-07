@@ -1,15 +1,14 @@
 # Portfolio Website
 
-A personal portfolio built with React and Vite for JyunRu Huang.
+A personal portfolio built with React and Vite for JyunRu Huang. The site highlights professional experience, featured projects, education, case competition work, skills, certificates, and contact information.
 
-## What Changed In This Version
+## Features
 
-- Refreshed visual system with a modern color palette, custom typography, and layered backgrounds
-- Improved navigation with active-section highlighting, mobile drawer, and scroll progress indicator
-- Added interaction upgrades: section reveal animations, project category filters, expandable experience cards, and back-to-top button
-- Improved contact section with quick actions and copy-email workflow
-- Added `withBase()` utility so local assets resolve correctly under GitHub Pages base paths
-- Updated metadata in `index.html` for better SEO and social sharing
+- Single-page layout with smooth-scroll navigation
+- Dedicated sections for profile summary, projects, experience, education, case competition, skills, certificates, and contact
+- Downloadable resume and project artifacts hosted from the `docs/` public directory
+- Contact form that opens a prefilled email message via `mailto:`
+- Datasette warm-up request on load for the MuckRock data exploration project
 
 ## Tech Stack
 
@@ -36,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open http://localhost:5173.
 
 ### Build for Production
 
@@ -50,23 +49,60 @@ npm run build
 npm run preview
 ```
 
+## Project Structure
+
+```
+portfolio_website/
+├── docs/                 # Public assets (resume, headshot, reports, logos)
+├── src/
+│   ├── components/       # Section components
+│   │   ├── About.jsx
+│   │   ├── CaseCompetition.jsx
+│   │   ├── Certificates.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   └── Skills.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── package.json
+├── render.yaml
+└── vite.config.js
+```
+
 ## Content Updates
 
-Edit content directly in these files:
+Update content in the section components under `src/components`:
 
-- `src/components/Hero.jsx`
-- `src/components/About.jsx`
-- `src/components/Projects.jsx`
-- `src/components/Experience.jsx`
-- `src/components/Education.jsx`
-- `src/components/CaseCompetition.jsx`
-- `src/components/Skills.jsx`
-- `src/components/Certificates.jsx`
-- `src/components/Contact.jsx`
+- `Navbar.jsx`: navigation labels and resume download link
+- `Hero.jsx`: headline, summary, and social links
+- `About.jsx`: summary paragraphs and highlight cards
+- `Projects.jsx`: project list, links, and artifacts
+- `Experience.jsx`: work history and impact bullets
+- `Education.jsx`: degrees and coursework
+- `CaseCompetition.jsx`: competition details
+- `Skills.jsx`: skill categories and tags
+- `Certificates.jsx`: certifications
+- `Contact.jsx`: contact details and the `mailto` form configuration
 
-For local assets (PDFs, images, logos), use `withBase()` from `src/utils/assetPath.js`.
+Static files referenced by the site (resume, headshot, reports, logos) live in `docs/`, which is configured as Vite's `publicDir`.
 
-## Deployment Notes
+## Deployment (GitHub Pages)
 
-- Public assets are served from `docs/` via `vite.config.js` (`publicDir: 'docs'`).
-- `BASE_PATH` support is already configured for project pages deployment.
+This project ships with a GitHub Actions workflow that builds and deploys the Vite site
+to GitHub Pages whenever you push to `main`.
+
+1. Push the repository to GitHub.
+2. In the repo settings, enable **Pages** and set the source to **GitHub Actions**.
+3. Push to `main` to trigger the workflow.
+
+### Notes
+
+- The workflow sets `BASE_PATH` to `/<repo-name>/` so project pages resolve assets correctly.
+- If you are deploying to `username.github.io` (root domain), set `BASE_PATH` to `/` or remove the env override.

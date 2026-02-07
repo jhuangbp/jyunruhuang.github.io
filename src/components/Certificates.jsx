@@ -1,31 +1,31 @@
 import React from 'react'
 import './Certificates.css'
 
-const certificates = [
-  {
-    id: 1,
-    name: 'SAS Certified Specialist: Base Programming Using SAS 9.4',
-    issued: 'Dec 2025',
-    credentialId: '522568756',
-    provider: 'SAS'
-  }
-]
-
 const Certificates = () => {
+  const certificates = [
+    {
+      id: 1,
+      name: 'SAS Certified Specialist: Base Programming Using SAS 9.4',
+      issued: 'Dec 2025',
+      credentialId: '522568756'
+    }
+  ]
+
   return (
-    <section id="certificates" className="certificates" data-reveal>
+    <section id="certificates" className="certificates">
       <h2 className="section-title">Certificates</h2>
       <div className="certificates-container">
-        {certificates.map((certificate) => (
-          <article key={certificate.id} className="certificate-card card" data-reveal>
-            <span className="certificate-badge">Certified</span>
-            <h3>{certificate.name}</h3>
-            <p>{certificate.provider}</p>
-            <div className="certificate-meta">
-              <span>Issued: {certificate.issued}</span>
-              <span>Credential ID: {certificate.credentialId}</span>
+        {certificates.map((cert) => (
+          <div key={cert.id} className="certificate-card">
+            <div className="certificate-icon">✓</div>
+            <div className="certificate-details">
+              <h3 className="certificate-name">{cert.name}</h3>
+              <div className="certificate-meta">
+                <span>Issued: {cert.issued}</span>
+                <span>Credential ID: {cert.credentialId}</span>
+              </div>
             </div>
-          </article>
+          </div>
         ))}
       </div>
     </section>

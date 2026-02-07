@@ -2,73 +2,55 @@ import React from 'react'
 import './About.css'
 
 const About = () => {
-  const facts = [
-    { label: 'Credit Risk Experience', value: '3+ years' },
-    { label: 'Graduate Degree', value: 'M.S. Business Analytics' },
-    { label: 'Modeling Scope', value: 'Retail lending + healthcare + media' },
-    { label: 'Start Date', value: 'Available immediately' }
-  ]
-
-  const strengths = [
-    {
-      title: 'Banking Domain Depth',
-      points: [
-        'Built mortgage and personal loan risk models using SAS and SQL.',
-        'Led a patented geospatial mortgage risk initiative in Taiwan.'
-      ]
-    },
-    {
-      title: 'Production-Minded Analytics',
-      points: [
-        'Reduce high-dimensional features into explainable predictors.',
-        'Translate technical findings into decisions business teams can adopt.'
-      ]
-    },
-    {
-      title: 'Modern ML Toolkit',
-      points: [
-        'Hands-on with PyTorch, TensorFlow, XGBoost, and PySpark.',
-        'Experienced across supervised, unsupervised, and multimodal modeling.'
-      ]
-    }
-  ]
-
   return (
-    <section id="about" className="about" data-reveal>
+    <section id="about" className="about">
       <h2 className="section-title">About Me</h2>
+      <div className="about-content">
+        <div className="about-text">
+          <p>
+            Hi, I am Jyun-Ru (Jin). I recently completed an M.S. in Business Analytics at Boston University’s Questrom School of Business. Previously, I spent nearly three years at CTBC Bank, Taiwan’s largest bank, as a Retail Credit Risk Analyst, where I developed internal loss forecasting models for mortgage and personal loans using SAS and SQL. Notably, I led a geospatial risk research project that integrated meteorological open data with internal mortgage data to quantify typhoon flood impacts on collateral, resulting in a patented geographic risk model in Taiwan.
+          </p>
+          <p>
+            During my graduate studies, I developed a multimodal deep learning model to predict IMDb movie ratings using movie plot summaries and poster images, without relying on audience reviews or box office information. This project integrated Python and PyTorch and utilized cloud-based GPU acceleration, representing the culmination of my graduate training in analytics.
+          </p>
+          <p>
+            I am enthusiastic about applying my analytical skills and banking industry experience to drive data-driven innovation in business analytics and risk management.
+          </p>
+        </div>
 
-      <div className="about-intro card" data-reveal>
-        <p>
-          Hi, I am Jyun-Ru (Jin). I recently completed an M.S. in Business Analytics at Boston University
-          Questrom School of Business. Before graduate school, I worked as a Retail Credit Risk Analyst at CTBC
-          Bank and developed forecasting models for mortgage and personal loans.
-        </p>
-        <p>
-          I combine finance context with machine learning execution, and I am looking for roles where data
-          products can improve risk decisions, operational planning, and customer outcomes.
-        </p>
-      </div>
-
-      <div className="about-facts">
-        {facts.map((fact) => (
-          <article key={fact.label} className="about-fact card" data-reveal>
-            <p className="about-fact-value">{fact.value}</p>
-            <p className="about-fact-label">{fact.label}</p>
-          </article>
-        ))}
-      </div>
-
-      <div className="about-strengths">
-        {strengths.map((item) => (
-          <article key={item.title} className="about-strength card" data-reveal>
-            <h3>{item.title}</h3>
-            <ul>
-              {item.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
+        <div className="about-highlights">
+          <div className="highlight-card">
+            <h3>Employment status</h3>
+            <ul className="check-list">
+              <li>Boston University — M.S. in Business Analytics</li>
+              <li>graduated in January 2026</li>
+              <li>Available to start immediately</li>
             </ul>
-          </article>
-        ))}
+          </div>
+          <div className="highlight-card">
+            <h3>Skills</h3>
+            <ul className="skills-list">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Tableau</li>
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>SAS</li>
+              <li>PySpark</li>
+              <li>Esri ArcGIS</li>
+              <li>Google Cloud Platform</li>
+              <li>Excel VBA Programming</li>
+            </ul>
+          </div>
+          <div className="highlight-card">
+            <h3>Experiences</h3>
+            <ul className="check-list">
+              <li>Credit risk modeling for Mortgage and Personal Loans</li>
+              <li>Led a geospatial risk research project that integrated internal and external data into a patented solution.</li>
+              <li>End-to-End Deep Learning framework development across two academic projects</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   )
