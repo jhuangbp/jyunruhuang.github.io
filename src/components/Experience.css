@@ -13,8 +13,8 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: var(--border-color);
+  width: 3px;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.4), rgba(249, 115, 22, 0.3));
 }
 
 .experience-item {
@@ -32,7 +32,7 @@
   border-radius: 50%;
   background: var(--primary-color);
   border: 3px solid var(--bg-white);
-  box-shadow: 0 0 0 3px var(--primary-color);
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.2);
 }
 
 .experience-content {
@@ -41,11 +41,13 @@
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .experience-content:hover {
-  transform: translateX(5px);
+  transform: translateX(6px);
   box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 130, 246, 0.2);
 }
 
 .experience-header {

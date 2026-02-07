@@ -3,9 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.35), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(249, 115, 22, 0.2), transparent 45%),
+    linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
   color: white;
-  padding-top: 80px;
+  padding: 120px 0 80px;
 }
 
 .hero-container {
@@ -17,7 +19,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 4rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
@@ -32,8 +34,8 @@
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 6px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.5);
 }
 
 .hero-text {
@@ -52,12 +54,30 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 400;
   opacity: 0.9;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-badges span {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .hero-description {
@@ -86,8 +106,8 @@
 }
 
 .btn {
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 0.9rem 1.75rem;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -99,6 +119,7 @@
 .btn-primary {
   background: white;
   color: var(--primary-color);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
 }
 
 .btn-primary:hover {
@@ -128,6 +149,31 @@
   border-color: white;
 }
 
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hero-stats div {
+  background: rgba(15, 23, 42, 0.35);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
 @media (max-width: 968px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -145,6 +191,14 @@
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
   }
 }
 

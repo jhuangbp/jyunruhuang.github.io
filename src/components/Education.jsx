@@ -58,33 +58,39 @@ const Education = () => {
 
   return (
     <section id="education" className="education">
-      <h2 className="section-title">Education</h2>
-      <div className="education-container">
-        {education.map((edu) => (
-          <div key={edu.id} className="education-card">
-            <div className="education-header">
-              <img className="education-logo" src={edu.logo} alt={edu.logoAlt} />
-              <div>
-                <h3 className="education-degree">{edu.degree}</h3>
-                <div className="education-school">{edu.school}</div>
+      <div className="section-container">
+        <p className="section-eyebrow">Education</p>
+        <h2 className="section-title">Academic Background</h2>
+        <p className="section-subtitle">
+          Graduate analytics training combined with economics foundations and exchange programs.
+        </p>
+        <div className="education-container">
+          {education.map((edu) => (
+            <div key={edu.id} className="education-card">
+              <div className="education-header">
+                <img className="education-logo" src={edu.logo} alt={edu.logoAlt} />
+                <div>
+                  <h3 className="education-degree">{edu.degree}</h3>
+                  <div className="education-school">{edu.school}</div>
+                </div>
               </div>
-            </div>
-            <div className="education-meta">
-              <span>{edu.period}</span>
-              {edu.gpa && <span>{edu.gpa}</span>}
-            </div>
-            {edu.courses.length > 0 && (
-              <div className="education-courses">
-                <h4>Coursework: </h4>
-                <ul>
-                  {edu.courses.map((course, index) => (
-                    <li key={index}>{course}</li>
-                  ))}
-                </ul>
+              <div className="education-meta">
+                <span>{edu.period}</span>
+                {edu.gpa && <span>{edu.gpa}</span>}
               </div>
-            )}
-          </div>
-        ))}
+              {edu.courses.length > 0 && (
+                <div className="education-courses">
+                  <h4>Coursework: </h4>
+                  <ul>
+                    {edu.courses.map((course, index) => (
+                      <li key={index}>{course}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

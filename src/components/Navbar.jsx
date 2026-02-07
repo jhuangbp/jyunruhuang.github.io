@@ -30,6 +30,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => scrollToSection('hero')}>
           <span>JyunRu Huang</span>
+          <span className="navbar-status">Open to opportunities</span>
         </div>
         
         <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>

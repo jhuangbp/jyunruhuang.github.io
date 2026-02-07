@@ -29,6 +29,13 @@
   gap: 0.5rem;
 }
 
+.contact-action {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .contact-item strong {
   color: var(--text-dark);
   font-size: 1rem;
@@ -48,11 +55,28 @@
   color: var(--text-light);
 }
 
+.copy-btn {
+  background: var(--text-dark);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-1px);
+}
+
 .contact-form {
   background: var(--bg-white);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -88,11 +112,11 @@
 }
 
 .btn-submit {
-  background: var(--primary-color);
+  background: var(--text-dark);
   color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -101,7 +125,7 @@
 }
 
 .btn-submit:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
@@ -117,4 +141,3 @@
     padding: 1.5rem;
   }
 }
-

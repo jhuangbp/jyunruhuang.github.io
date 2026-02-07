@@ -2,14 +2,18 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-white);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: transparent;
   z-index: 1000;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .navbar.scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: var(--shadow);
+  color: var(--text-dark);
 }
 
 .navbar-container {
@@ -19,18 +23,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: inherit;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .navbar-logo:hover {
   color: var(--secondary-color);
+}
+
+.navbar-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .navbar-menu {
@@ -42,14 +58,14 @@
 
 .navbar-menu li {
   cursor: pointer;
-  color: var(--text-dark);
+  color: inherit;
   font-weight: 500;
   transition: color 0.3s ease;
   position: relative;
 }
 
 .navbar-menu li:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .navbar-menu li::after {
@@ -59,7 +75,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: currentColor;
   transition: width 0.3s ease;
 }
 
@@ -68,17 +84,17 @@
 }
 
 .navbar-cv-btn {
-  background: var(--primary-color);
-  color: white;
+  background: white;
+  color: var(--text-dark);
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .navbar-cv-btn:hover {
-  background: var(--secondary-color);
+  background: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
@@ -95,8 +111,17 @@
 .navbar-toggle span {
   width: 25px;
   height: 3px;
-  background: var(--text-dark);
+  background: currentColor;
   transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-cv-btn {
+  background: var(--text-dark);
+  color: white;
+}
+
+.navbar.scrolled .navbar-menu li:hover {
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
@@ -104,12 +129,17 @@
     display: flex;
   }
 
+  .navbar-status {
+    display: none;
+  }
+
   .navbar-menu {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--bg-white);
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
     flex-direction: column;
     padding: 1rem;
     box-shadow: var(--shadow);
@@ -138,4 +168,3 @@
     padding: 1rem;
   }
 }
-

@@ -13,20 +13,26 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="certificates">
-      <h2 className="section-title">Certificates</h2>
-      <div className="certificates-container">
-        {certificates.map((cert) => (
-          <div key={cert.id} className="certificate-card">
-            <div className="certificate-icon">✓</div>
-            <div className="certificate-details">
-              <h3 className="certificate-name">{cert.name}</h3>
-              <div className="certificate-meta">
-                <span>Issued: {cert.issued}</span>
-                <span>Credential ID: {cert.credentialId}</span>
+      <div className="section-container">
+        <p className="section-eyebrow">Credentials</p>
+        <h2 className="section-title">Certificates</h2>
+        <p className="section-subtitle">
+          Professional certifications that complement analytics and risk modeling experience.
+        </p>
+        <div className="certificates-container">
+          {certificates.map((cert) => (
+            <div key={cert.id} className="certificate-card">
+              <div className="certificate-icon">✓</div>
+              <div className="certificate-details">
+                <h3 className="certificate-name">{cert.name}</h3>
+                <div className="certificate-meta">
+                  <span>Issued: {cert.issued}</span>
+                  <span>Credential ID: {cert.credentialId}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
