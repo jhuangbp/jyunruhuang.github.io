@@ -89,6 +89,16 @@ const Hero = () => {
                 <span className="stat-label">Boston University</span>
               </div>
             </div>
+
+            <button
+              className="hero-scroll"
+              type="button"
+              onClick={() => scrollToSection('about')}
+              aria-label="Scroll to about section"
+            >
+              <span>Scroll to explore</span>
+              <span className="hero-scroll-arrow">↓</span>
+            </button>
           </div>
         </div>
       </div>

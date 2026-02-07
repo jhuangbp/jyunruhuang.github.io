@@ -32,6 +32,11 @@ const CaseCompetition = () => {
               <p className="case-competition-highlight">
                 Placed in the Top 50 (Round 2) and AUC scored in the Top 10 among 200+ teams
               </p>
+              <div className="case-competition-tags">
+                <span>Top 50 Finalist</span>
+                <span>Top 10 AUC</span>
+                <span>200+ Teams</span>
+              </div>
               <ul className="case-competition-bullets">
                 <li>
                   A national healthcare analytics competition hosted by Humana (NYSE: HUM) and Texas A&M University, bringing together over 900 master’s students from 74 universities and more than 200 teams nationwide.

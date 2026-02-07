@@ -11,7 +11,7 @@
 }
 
 .education-card {
-  background: var(--bg-light);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
