@@ -1,4 +1,5 @@
 import React from 'react'
+import { withBase } from '../utils/assetPath'
 import './CaseCompetition.css'
 
 const CaseCompetition = () => {
@@ -16,12 +17,16 @@ const CaseCompetition = () => {
               <div className="case-competition-logo-slot">
                 <img
                   className="case-competition-logo"
-                  src="/logo/Texas_AM_University_seal.svg"
+                  src={withBase('logo/Texas_AM_University_seal.svg')}
                   alt="Texas A&M University logo"
                 />
               </div>
               <div className="case-competition-logo-slot">
-                <img className="case-competition-logo" src="/logo/humana_logo.svg" alt="Humana logo" />
+                <img
+                  className="case-competition-logo"
+                  src={withBase('logo/humana_logo.svg')}
+                  alt="Humana logo"
+                />
               </div>
             </div>
             <div className="case-competition-content">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { withBase } from '../utils/assetPath'
 import './Navbar.css'
 
 const NAV_ITEMS = [
@@ -76,7 +77,7 @@ const Navbar = () => {
   }
 
   const downloadCV = () => {
-    window.open('/JyunRu_Huang_Resume.pdf', '_blank')
+    window.open(withBase('JyunRu_Huang_Resume.pdf'), '_blank')
   }
 
   return (

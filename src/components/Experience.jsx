@@ -1,4 +1,5 @@
 import React from 'react'
+import { withBase } from '../utils/assetPath'
 import './Experience.css'
 
 const Experience = () => {
@@ -6,7 +7,7 @@ const Experience = () => {
     {
       id: 1,
       company: 'CTBC Bank (a leading private commercial bank in Taiwan)',
-      logo: '/logo/ctbc_bank.png',
+      logo: withBase('logo/ctbc_bank.png'),
       logoAlt: 'CTBC Bank logo',
       position: 'Retail Credit Risk Analyst',
       period: 'Jul 2020 – May 2023',
@@ -20,7 +21,7 @@ const Experience = () => {
     {
       id: 2,
       company: 'Taipei Fubon Commercial Bank',
-      logo: '/logo/fubon-bank.jpg',
+      logo: withBase('logo/fubon-bank.jpg'),
       logoAlt: 'Taipei Fubon Commercial Bank logo',
       position: 'Institutional Credit Risk Analyst',
       period: 'Jul 2019 – Jun 2020',
@@ -33,7 +34,7 @@ const Experience = () => {
     {
       id: 3,
       company: 'E.Sun Commercial Bank',
-      logo: '/logo/E-Sun-logo.jpg.png',
+      logo: withBase('logo/E-Sun-logo.jpg.png'),
       logoAlt: 'E.Sun Commercial Bank logo',
       position: 'Credit Card Marketing Intern',
       period: 'Jul 2018 – Aug 2018',
