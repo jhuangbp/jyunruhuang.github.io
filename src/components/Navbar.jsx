@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { withBase } from '../utils/assetPath'
 import './Navbar.css'
 
 const NAV_ITEMS = [
@@ -16,6 +17,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,25 @@ const Navbar = () => {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const { scrollHeight } = document.documentElement
+      const scrollTop = window.scrollY
+      const windowHeight = window.innerHeight
+      const totalScroll = scrollHeight - windowHeight
+      const progress = totalScroll > 0 ? (scrollTop / totalScroll) * 100 : 0
+      setScrollProgress(progress)
+    }
+
+    updateProgress()
+    window.addEventListener('scroll', updateProgress)
+    window.addEventListener('resize', updateProgress)
+    return () => {
+      window.removeEventListener('scroll', updateProgress)
+      window.removeEventListener('resize', updateProgress)
+    }
   }, [])
 
   useEffect(() => {
@@ -56,11 +77,14 @@ const Navbar = () => {
   }
 
   const downloadCV = () => {
-    window.open('/JyunRu_Huang_Resume.pdf', '_blank')
+    window.open(withBase('JyunRu_Huang_Resume.pdf'), '_blank')
   }
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-progress">
+        <span style={{ width: `${scrollProgress}%` }} />
+      </div>
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => scrollToSection('hero')}>
           <span>JyunRu Huang</span>
@@ -86,6 +110,8 @@ const Navbar = () => {
         <button 
           className="navbar-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
         >
           <span></span>
           <span></span>

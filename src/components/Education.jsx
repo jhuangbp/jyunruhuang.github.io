@@ -1,4 +1,5 @@
 import React from 'react'
+import { withBase } from '../utils/assetPath'
 import './Education.css'
 
 const Education = () => {
@@ -6,7 +7,7 @@ const Education = () => {
     {
       id: 1,
       school: 'Boston University, Questrom School of Business',
-      logo: '/logo/Boston_University_seal.png',
+      logo: withBase('logo/Boston_University_seal.png'),
       logoAlt: 'Boston University seal',
       degree: 'M.S. in Business Analytics',
       period: 'Aug 2024 ~ Jan 2026',
@@ -24,7 +25,7 @@ const Education = () => {
     {
       id: 2,
       school: 'National Taiwan Normal University',
-      logo: '/logo/National_Taiwan_Normal_University.png',
+      logo: withBase('logo/National_Taiwan_Normal_University.png'),
       logoAlt: 'National Taiwan Normal University logo',
       degree: 'Non-Degree Program',
       period: 'Sep 2023 ~ Dec 2023',
@@ -37,7 +38,7 @@ const Education = () => {
     {
       id: 3,
       school: 'National Taiwan University',
-      logo: '/logo/National_Taiwan_University.png',
+      logo: withBase('logo/National_Taiwan_University.png'),
       logoAlt: 'National Taiwan University logo',
       degree: 'B.A. in Economics, Minor in Political Science',
       period: 'Aug 2014 ~ Jan 2019',
@@ -47,7 +48,7 @@ const Education = () => {
     {
       id: 4,
       school: 'Hong Kong University of Science and Technology, School of Business and Management',
-      logo: '/logo/HKUST.svg',
+      logo: withBase('logo/HKUST.svg'),
       logoAlt: 'Hong Kong University of Science and Technology logo',
       degree: 'Exchange Student Programme',
       period: 'Aug 2018 ~ Dec 2018',

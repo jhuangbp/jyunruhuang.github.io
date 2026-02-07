@@ -1,4 +1,5 @@
 import React from 'react'
+import { withBase } from '../utils/assetPath'
 import './Hero.css'
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
   }
 
   const downloadCV = () => {
-    window.open('/JyunRu_Huang_Resume.pdf', '_blank')
+    window.open(withBase('JyunRu_Huang_Resume.pdf'), '_blank')
   }
 
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-image-wrapper">
             <img 
-              src="/JyunRu_Huang_Headshot.jpg" 
+              src={withBase('JyunRu_Huang_Headshot.jpg')} 
               alt="JyunRu Huang" 
               className="hero-image"
             />
@@ -89,6 +90,16 @@ const Hero = () => {
                 <span className="stat-label">Boston University</span>
               </div>
             </div>
+
+            <button
+              className="hero-scroll"
+              type="button"
+              onClick={() => scrollToSection('about')}
+              aria-label="Scroll to about section"
+            >
+              <span>Scroll to explore</span>
+              <span className="hero-scroll-arrow">↓</span>
+            </button>
           </div>
         </div>
       </div>

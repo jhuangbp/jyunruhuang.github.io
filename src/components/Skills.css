@@ -9,7 +9,7 @@
 }
 
 .skill-category {
-  background: var(--bg-white);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -47,6 +47,8 @@
   font-size: 0.95rem;
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .skill-tag:hover {

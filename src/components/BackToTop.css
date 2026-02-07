@@ -4,10 +4,10 @@
   bottom: clamp(1rem, 4vw, 2rem);
   width: 2.9rem;
   height: 2.9rem;
-  border: 1px solid rgba(15, 127, 168, 0.42);
+  border: 1px solid rgba(59, 130, 246, 0.35);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
-  color: var(--brand-700);
+  color: var(--primary-color);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -36,6 +36,6 @@
 }
 
 .back-to-top:focus-visible {
-  outline: 3px solid rgba(237, 132, 40, 0.45);
+  outline: 3px solid rgba(249, 115, 22, 0.45);
   outline-offset: 2px;
 }

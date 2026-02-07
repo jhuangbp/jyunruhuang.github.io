@@ -24,6 +24,21 @@ const About = () => {
             </p>
           </div>
 
+          <div className="about-metrics">
+            <div className="about-metric">
+              <span className="metric-value">3+ Years</span>
+              <span className="metric-label">Credit risk modeling</span>
+            </div>
+            <div className="about-metric">
+              <span className="metric-value">200+ Teams</span>
+              <span className="metric-label">Case competition finalist</span>
+            </div>
+            <div className="about-metric">
+              <span className="metric-value">1 Patent</span>
+              <span className="metric-label">Geospatial risk research</span>
+            </div>
+          </div>
+
           <div className="about-highlights">
             <div className="highlight-card">
               <h3>Employment status</h3>

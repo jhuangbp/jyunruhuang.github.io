@@ -8,12 +8,34 @@
   color: white;
 }
 
+.navbar-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.navbar-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+  transition: width 0.2s ease-out;
+}
+
 .navbar.scrolled {
   background: var(--bg-glass);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: var(--shadow);
   color: var(--text-dark);
+}
+
+.navbar.scrolled .navbar-progress {
+  background: rgba(15, 23, 42, 0.08);
 }
 
 .navbar-container {
