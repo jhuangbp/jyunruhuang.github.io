@@ -92,14 +92,13 @@
 }
 
 .hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   font-size: 1.125rem;
   line-height: 1.8;
   opacity: 0.95;
   max-width: 720px;
-}
-
-.hero-description > span {
-  display: block;
 }
 
 .hero-description-nowrap {
