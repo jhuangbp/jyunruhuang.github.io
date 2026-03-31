@@ -16,9 +16,9 @@ const About = () => {
         <h2 className="section-heading">experience</h2>
         <div className="row align-items-start">
           <div className="col-md-5">
-            <div className="img-placeholder" style={{ minHeight: '360px' }}>
-              <span>workplace photo</span>
-            </div>
+            <img src={withBase('ctbc_experience.jpg')} alt="CTBC Bank workplace" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
+            <img src={withBase('fubon_experience.jpg')} alt="Taipei Fubon workplace" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
+            <img src={withBase('esun_experience.jpg')} alt="E.Sun workplace" className="img-fluid rounded" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
           </div>
           <div className="col-md-7">
 
@@ -118,9 +118,10 @@ const About = () => {
             <h6 className="text-muted mb-2">Aug 2018 – Dec 2018</h6>
           </div>
           <div className="col-md-5">
-            <div className="img-placeholder" style={{ minHeight: '400px' }}>
-              <span>campus / graduation photo</span>
-            </div>
+            <img src={withBase('BU_Life.jpg')} alt="Boston University campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
+            <img src={withBase('NTNU_Life.jpg')} alt="NTNU campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
+            <img src={withBase('NTU_Life.jpg')} alt="NTU campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
+            <img src={withBase('HKUST_Life.jpg')} alt="HKUST campus" className="img-fluid rounded" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
