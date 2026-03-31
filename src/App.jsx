@@ -1,44 +1,67 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import CaseCompetition from './components/CaseCompetition'
-import Skills from './components/Skills'
-import Certificates from './components/Certificates'
-import Contact from './components/Contact'
-import BackToTop from './components/BackToTop'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 import './App.css'
 
 function App() {
+  const getPageFromHash = () => {
+    const hash = window.location.hash.replace('#', '')
+    if (['about', 'projects', 'contact'].includes(hash)) return hash
+    return 'home'
+  }
+
+  const [currentPage, setCurrentPage] = useState(getPageFromHash)
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPage(getPageFromHash())
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  const navigate = (page) => {
+    window.location.hash = page === 'home' ? '' : page
+    setCurrentPage(page)
+    window.scrollTo(0, 0)
+  }
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'about':
+        return <About />
+      case 'projects':
+        return <Projects />
+      case 'contact':
+        return <Contact />
+      default:
+        return <Home onNavigate={navigate} />
+    }
+  }
+
+  // Warm up Datasette on Render
   useEffect(() => {
     const datasetteUrl = 'https://ds-701-muckrock-data-liberation-project.onrender.com'
     const controller = new AbortController()
-
     fetch(datasetteUrl, {
       mode: 'no-cors',
       cache: 'no-store',
       signal: controller.signal
     }).catch(() => {})
-
     return () => controller.abort()
   }, [])
 
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Education />
-      <CaseCompetition />
-      <Skills />
-      <Certificates />
-      <Contact />
-      <BackToTop />
+      <Navbar currentPage={currentPage} onNavigate={navigate} />
+      <main>
+        {renderPage()}
+      </main>
+      <Footer />
     </div>
   )
 }

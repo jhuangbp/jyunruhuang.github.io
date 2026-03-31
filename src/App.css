@@ -1,5 +1,11 @@
+/* Minimal App-level styles */
 .App {
-  width: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.App > main {
+  flex: 1;
+  padding-top: 56px; /* offset for fixed-top navbar */
+}
