@@ -10,19 +10,17 @@ const About = () => {
         <h5 className="mb-0">Jyun-Ru (Jin) Huang</h5>
       </div>
 
-      {/* Section 1: Work Experience — image left, text right */}
+      {/* Section 1: Work Experience */}
       <div className="container section-block">
         <h3 className="section-label">internship &amp; work</h3>
         <h2 className="section-heading">experience</h2>
-        <div className="row align-items-start">
-          <div className="col-md-5">
-            <img src={withBase('ctbc_experience.jpg')} alt="CTBC Bank workplace" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
-            <img src={withBase('fubon_experience.jpg')} alt="Taipei Fubon workplace" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
-            <img src={withBase('esun_experience.jpg')} alt="E.Sun workplace" className="img-fluid rounded" style={{ width: '100%', maxHeight: '220px', objectFit: 'cover' }} />
+
+        {/* CTBC Bank */}
+        <div className="row align-items-stretch">
+          <div className="col-md-5 d-flex">
+            <img src={withBase('ctbc_experience.jpg')} alt="CTBC Bank workplace" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
           </div>
           <div className="col-md-7">
-
-            {/* CTBC Bank */}
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/ctbc_bank.png')} height="28" className="mr-2" alt="CTBC Bank" />
               <h5 className="mb-0"><strong>CTBC Bank</strong></h5>
@@ -34,10 +32,17 @@ const About = () => {
               <li>Led research and modeling of typhoon flood impact on mortgage collateral using <strong>ArcGIS</strong>, resulting in a <strong>patented geographic risk model</strong> in Taiwan (TW M624436 U).</li>
               <li>Owned three risk analysis projects for mortgage and personal loans as a Management Associate, with one key finding successfully implemented after years of internal discussion.</li>
             </ul>
+          </div>
+        </div>
 
-            <hr className="my-4" />
+        <hr className="my-4" />
 
-            {/* Taipei Fubon */}
+        {/* Taipei Fubon */}
+        <div className="row align-items-stretch">
+          <div className="col-md-5 d-flex">
+            <img src={withBase('fubon_experience.jpg')} alt="Taipei Fubon workplace" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
+          </div>
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/fubon-bank.jpg')} height="28" className="mr-2" alt="Taipei Fubon" />
               <h5 className="mb-0"><strong>Taipei Fubon Commercial Bank</strong></h5>
@@ -48,10 +53,17 @@ const About = () => {
               <li>Conducted industry and financial statement analyses supporting corporate lending, accounting for <strong>8</strong> cases with total credit exposure over <strong>USD 100 million</strong>.</li>
               <li>Modified Excel VBA financial forecasting models to expand applicability from large corporates to companies of various sizes and industries.</li>
             </ul>
+          </div>
+        </div>
 
-            <hr className="my-4" />
+        <hr className="my-4" />
 
-            {/* E.Sun */}
+        {/* E.Sun */}
+        <div className="row align-items-stretch">
+          <div className="col-md-5 d-flex">
+            <img src={withBase('esun_experience.jpg')} alt="E.Sun workplace" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
+          </div>
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/E-Sun-logo.jpg.png')} height="28" className="mr-2" alt="E.Sun Bank" />
               <h5 className="mb-0"><strong>E.Sun Commercial Bank</strong></h5>
@@ -66,13 +78,13 @@ const About = () => {
         </div>
       </div>
 
-      {/* Section 2: Education — text left, image right */}
+      {/* Section 2: Education */}
       <div className="container section-block">
         <h2 className="section-heading">education</h2>
-        <div className="row align-items-start">
-          <div className="col-md-7">
 
-            {/* Boston University */}
+        {/* Boston University */}
+        <div className="row align-items-stretch">
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/Boston_University_seal.png')} height="32" className="mr-2" alt="Boston University" />
               <h5 className="mb-0"><strong>Boston University, Questrom School of Business</strong></h5>
@@ -83,10 +95,17 @@ const About = () => {
               <li>Neural Networks · Unsupervised &amp; Supervised Machine Learning · ML in Healthcare</li>
               <li>Data Analytics (Python) · Analytics Toolbox (SQL + Tableau) · Big Data Analytics (PySpark)</li>
             </ul>
+          </div>
+          <div className="col-md-5 d-flex">
+            <img src={withBase('BU_Life.jpg')} alt="Boston University campus" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
+          </div>
+        </div>
 
-            <hr className="my-4" />
+        <hr className="my-4" />
 
-            {/* NTNU */}
+        {/* NTNU */}
+        <div className="row align-items-stretch">
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/National_Taiwan_Normal_University.png')} height="32" className="mr-2" alt="NTNU" />
               <h5 className="mb-0"><strong>National Taiwan Normal University</strong></h5>
@@ -96,20 +115,34 @@ const About = () => {
             <ul className="content-bullets">
               <li>Big Data Programming (Python) · Theory of Probability</li>
             </ul>
+          </div>
+          <div className="col-md-5 d-flex">
+            <img src={withBase('NTNU_Life.jpg')} alt="NTNU campus" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
+          </div>
+        </div>
 
-            <hr className="my-4" />
+        <hr className="my-4" />
 
-            {/* NTU */}
+        {/* NTU */}
+        <div className="row align-items-stretch">
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/National_Taiwan_University.png')} height="32" className="mr-2" alt="NTU" />
               <h5 className="mb-0"><strong>National Taiwan University</strong></h5>
             </div>
             <h6 className="mb-0">B.A. in Economics, Minor in Political Science</h6>
             <h6 className="text-muted mb-2">Aug 2014 – Jan 2019</h6>
+          </div>
+          <div className="col-md-5 d-flex">
+            <img src={withBase('NTU_Life.jpg')} alt="NTU campus" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
+          </div>
+        </div>
 
-            <hr className="my-4" />
+        <hr className="my-4" />
 
-            {/* HKUST */}
+        {/* HKUST */}
+        <div className="row align-items-stretch">
+          <div className="col-md-7">
             <div className="d-flex align-items-center mb-1">
               <img src={withBase('logo/HKUST.svg')} height="32" className="mr-2" alt="HKUST" />
               <h5 className="mb-0"><strong>Hong Kong University of Science and Technology</strong></h5>
@@ -117,16 +150,13 @@ const About = () => {
             <h6 className="mb-0">Exchange Student Programme, School of Business and Management</h6>
             <h6 className="text-muted mb-2">Aug 2018 – Dec 2018</h6>
           </div>
-          <div className="col-md-5">
-            <img src={withBase('BU_Life.jpg')} alt="Boston University campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
-            <img src={withBase('NTNU_Life.jpg')} alt="NTNU campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
-            <img src={withBase('NTU_Life.jpg')} alt="NTU campus" className="img-fluid rounded mb-3" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
-            <img src={withBase('HKUST_Life.jpg')} alt="HKUST campus" className="img-fluid rounded" style={{ width: '100%', maxHeight: '200px', objectFit: 'cover' }} />
+          <div className="col-md-5 d-flex">
+            <img src={withBase('HKUST_Life.jpg')} alt="HKUST campus" className="rounded" style={{ width: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
 
-      {/* Section 3: Leadership & Involvement — image left, text right */}
+      {/* Section 3: Leadership & Involvement */}
       <div className="container section-block">
         <h3 className="section-label">leadership</h3>
         <h2 className="section-heading">&amp; involvement</h2>
