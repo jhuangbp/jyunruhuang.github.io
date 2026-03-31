@@ -156,20 +156,11 @@ const About = () => {
         </div>
       </div>
 
-      {/* Section 3: Leadership & Involvement */}
+      {/* Section 3: Other */}
       <div className="container section-block">
-        <h3 className="section-label">leadership</h3>
-        <h2 className="section-heading">&amp; involvement</h2>
+        <h2 className="section-heading">other</h2>
         <div className="row align-items-start">
-          <div className="col-md-5">
-            <div className="img-placeholder mb-3" style={{ minHeight: '220px' }}>
-              <span>patent / research photo</span>
-            </div>
-            <div className="img-placeholder" style={{ minHeight: '220px' }}>
-              <span>competition / teamwork photo</span>
-            </div>
-          </div>
-          <div className="col-md-7">
+          <div className="col-md-12">
 
             {/* Patent */}
             <h5><strong>Inventor — Patented Geographic Risk Model</strong></h5>
