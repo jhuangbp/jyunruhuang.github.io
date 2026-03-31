@@ -13,9 +13,11 @@ const Projects = () => {
       <div className="container section-block">
         <div className="row align-items-center">
           <div className="col-md-5">
-            <div className="img-placeholder">
-              <span>multimodal deep learning</span>
-            </div>
+            <img
+              src={withBase('Movie_project_banner.webp')}
+              className="img-fluid"
+              alt="Predicting Movie Ratings from Multimodal Data"
+            />
           </div>
           <div className="col-md-7">
             <h2>Predicting Movie Ratings from Multimodal Data</h2>
@@ -41,9 +43,11 @@ const Projects = () => {
       <div className="container section-block">
         <div className="row align-items-center">
           <div className="col-md-5">
-            <div className="img-placeholder">
-              <span>healthcare analytics</span>
-            </div>
+            <img
+              src={withBase('icu_project_banner.png')}
+              className="img-fluid"
+              alt="ICU Demand Forecasting for Hospital Capacity Planning"
+            />
           </div>
           <div className="col-md-7">
             <h2>ICU Demand Forecasting for Hospital Capacity Planning</h2>
@@ -77,9 +81,11 @@ const Projects = () => {
       <div className="container section-block">
         <div className="row align-items-center">
           <div className="col-md-5">
-            <div className="img-placeholder">
-              <span>data engineering</span>
-            </div>
+            <img
+              src={withBase('Military_Slot_project_banner%20.png')}
+              className="img-fluid"
+              alt="U.S. Military Base Slot Machine Revenue Explorer"
+            />
           </div>
           <div className="col-md-7">
             <h2>U.S. Military Base Slot Machine Revenue Explorer</h2>
