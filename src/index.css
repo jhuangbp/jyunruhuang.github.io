@@ -44,7 +44,7 @@ a:hover {
   overflow: hidden;
   margin: 2rem 0;
   min-height: 480px;
-  background: #f0ebe4;
+  background: #ffffff;
 }
 
 .home-card-block.reverse {
@@ -87,8 +87,7 @@ a:hover {
 }
 
 .home-card-text-inner {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(2px);
+  background: #ffffff;
   border-radius: 14px;
   padding: 2rem 2.25rem;
   width: 100%;
