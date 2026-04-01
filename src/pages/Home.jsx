@@ -42,9 +42,12 @@ const Home = ({ onNavigate }) => {
         <h2 className="section-heading">technical expertise</h2>
         <div className="row align-items-center">
           <div className="col-md-6 order-md-1 order-2">
-            <div className="img-placeholder">
-              <span>analytics workspace</span>
-            </div>
+            <img
+              src={withBase('areas_of_expertise.jpg')}
+              className="img-fluid rounded"
+              alt="Analytics workspace"
+              style={{ width: '100%', objectFit: 'cover' }}
+            />
           </div>
           <div className="col-md-6 order-md-2 order-1">
             <p>
@@ -77,8 +80,29 @@ const Home = ({ onNavigate }) => {
             </p>
           </div>
           <div className="col-md-6">
-            <div className="img-placeholder">
-              <span>travel &amp; life</span>
+            <img
+              src={withBase('life_beyond_analytics_2.png')}
+              className="img-fluid rounded mb-2"
+              alt="Life beyond analytics"
+              style={{ width: '100%', height: '260px', objectFit: 'cover' }}
+            />
+            <div className="row g-2">
+              <div className="col-6">
+                <img
+                  src={withBase('life_beyond_analytics_1.jpg')}
+                  className="img-fluid rounded"
+                  alt="Life beyond analytics"
+                  style={{ width: '100%', height: '160px', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="col-6">
+                <img
+                  src={withBase('life_beyond_analytics_3.jpg')}
+                  className="img-fluid rounded"
+                  alt="Life beyond analytics"
+                  style={{ width: '100%', height: '160px', objectFit: 'cover' }}
+                />
+              </div>
             </div>
           </div>
         </div>
