@@ -12,18 +12,18 @@ const Home = ({ onNavigate }) => {
 
       {/* Section 1: Background — text left, image right */}
       <div className="container section-block">
-        <h3 className="section-label">passionate about</h3>
-        <h2 className="section-heading">credit risk &amp; data analytics</h2>
+        <h3 className="section-label">credit risk analytics &amp;</h3>
+        <h2 className="section-heading">data driven impact</h2>
         <div className="row align-items-center">
           <div className="col-md-6">
             <p>
-              With <strong>3+ years of banking experience</strong> at CTBC Bank — Taiwan's largest private commercial bank — I specialize in <strong>credit risk modeling</strong> for mortgage and personal loans. I developed loss forecasting models using <strong>SAS</strong> and <strong>SQL</strong>, improving model discrimination by <strong>18%</strong> (measured by Gini coefficient).
+              Hi, I'm <strong>Jyun Ru (Jin)</strong>. I recently completed my <strong>M.S. in Business Analytics</strong> at Boston University's Questrom School of Business. Previously, I spent nearly three years at <strong>CTBC Bank</strong>, Taiwan's largest private commercial bank, as a <strong>Retail Credit Risk Analyst</strong>, where I developed internal loss forecasting models for mortgage and personal loans using <strong>SAS</strong> and <strong>SQL</strong>.
             </p>
             <p>
-              I led a pioneering geospatial risk research project that analyzed <strong>typhoon flood impacts on mortgage collateral</strong> using ArcGIS, resulting in a <strong>patented geographic risk model</strong> (TW M624436 U) in Taiwan — a first-of-its-kind approach in the domestic banking industry.
+              One project I'm especially proud of: I led a <strong>geospatial risk research initiative</strong> that integrated meteorological open data with internal mortgage data to quantify <strong>typhoon flood impacts on collateral</strong>, resulting in a <strong>patented geographic risk model</strong> in Taiwan — a first of its kind approach in the domestic banking industry.
             </p>
             <p>
-              Currently completing my <strong>M.S. in Business Analytics</strong> at Boston University's Questrom School of Business, I'm bridging my deep domain expertise with cutting-edge <strong>machine learning</strong> and <strong>deep learning</strong> techniques.
+              I believe data is only as powerful as our ability to translate it into decisions that <strong>manage risk</strong> and <strong>create real value</strong>. I'm excited to keep learning, building, and applying analytics to meaningful, real world challenges.
             </p>
           </div>
           <div className="col-md-6">
@@ -38,8 +38,8 @@ const Home = ({ onNavigate }) => {
 
       {/* Section 2: Technical Skills — image left, text right */}
       <div className="container section-block">
-        <h3 className="section-label">areas of</h3>
-        <h2 className="section-heading">technical expertise</h2>
+        <h3 className="section-label">areas of expertise</h3>
+        <h2 className="section-heading">Python, SQL, SAS, PyTorch</h2>
         <div className="row align-items-center">
           <div className="col-md-6 order-md-1 order-2">
             <img
@@ -51,13 +51,13 @@ const Home = ({ onNavigate }) => {
           </div>
           <div className="col-md-6 order-md-2 order-1">
             <p>
-              My technical toolkit spans <strong>Python</strong>, <strong>SQL</strong>, <strong>SAS</strong>, <strong>PyTorch</strong>, <strong>TensorFlow</strong>, and <strong>PySpark</strong> for data processing and modeling. I use <strong>Tableau</strong> for visualization and <strong>Esri ArcGIS</strong> for geographic information analysis.
+              With dual experience in <strong>banking credit risk</strong> and <strong>graduate level business analytics</strong>, I work across <strong>Python</strong>, <strong>SQL</strong>, <strong>SAS</strong>, and <strong>PyTorch</strong> to build models, automate workflows, and uncover insights from complex data.
             </p>
             <p>
-              At Boston University, I've built projects ranging from <strong>multimodal deep learning</strong> (predicting IMDb ratings from text + images) to <strong>ICU demand forecasting</strong> (XGBoost models achieving AUC of 0.96) to <strong>data engineering pipelines</strong> (extracting data from 203-page PDFs).
+              During my graduate studies, I developed a <strong>multimodal deep learning model</strong> to predict IMDb movie ratings using movie plot summaries and poster images, without relying on audience reviews or box office data. Built with Python and PyTorch on <strong>cloud based GPU infrastructure</strong>, this project represents the culmination of my graduate training in bridging unstructured data with advanced modeling techniques.
             </p>
             <p>
-              I'm proficient in cloud-based workflows with <strong>Google Cloud Platform</strong> and version control with <strong>Git</strong>, and I hold a <strong>SAS Certified Specialist</strong> credential in Base Programming.
+              Beyond deep learning, I built an <strong>ICU demand forecasting model</strong> using XGBoost that achieved an <strong>AUC of 0.96</strong>, helping healthcare teams anticipate patient surges and allocate critical resources more effectively. I also designed a <strong>data engineering pipeline</strong> to extract and structure information from 500+ page regulatory PDF documents, transforming dense unstructured text into clean, queryable datasets ready for downstream analysis.
             </p>
           </div>
         </div>
