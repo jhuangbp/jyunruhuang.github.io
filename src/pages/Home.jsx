@@ -80,27 +80,27 @@ const Home = ({ onNavigate }) => {
             </p>
           </div>
           <div className="col-md-6">
-            <img
-              src={withBase('life_beyond_analytics_2.png')}
-              className="img-fluid rounded mb-2"
-              alt="Life beyond analytics"
-              style={{ width: '100%', height: '260px', objectFit: 'cover' }}
-            />
-            <div className="row g-2">
-              <div className="col-6">
+            <div className="d-flex gap-2" style={{ height: '340px' }}>
+              <div style={{ flex: '0 0 55%' }}>
                 <img
-                  src={withBase('life_beyond_analytics_1.jpg')}
-                  className="img-fluid rounded"
+                  src={withBase('life_beyond_analytics_2.png')}
+                  className="rounded"
                   alt="Life beyond analytics"
-                  style={{ width: '100%', height: '160px', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
-              <div className="col-6">
+              <div className="d-flex flex-column gap-2" style={{ flex: '0 0 calc(45% - 0.5rem)' }}>
+                <img
+                  src={withBase('life_beyond_analytics_1.jpg')}
+                  className="rounded"
+                  alt="Life beyond analytics"
+                  style={{ width: '100%', flex: 1, objectFit: 'cover' }}
+                />
                 <img
                   src={withBase('life_beyond_analytics_3.jpg')}
-                  className="img-fluid rounded"
+                  className="rounded"
                   alt="Life beyond analytics"
-                  style={{ width: '100%', height: '160px', objectFit: 'cover' }}
+                  style={{ width: '100%', flex: 1, objectFit: 'cover' }}
                 />
               </div>
             </div>
