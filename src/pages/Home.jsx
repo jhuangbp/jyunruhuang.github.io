@@ -77,16 +77,13 @@ const Home = ({ onNavigate }) => {
           </div>
           <div className="home-card-text-side">
             <div className="home-card-text-inner">
-              <h3 className="section-label">embracing</h3>
-              <h2 className="section-heading">life beyond analytics</h2>
+              <h3 className="section-label">life beyond the screen —</h3>
+              <h2 className="section-heading">mountains, snow, and miles</h2>
               <p>
-                Beyond data and models, I bring a global perspective shaped by living and studying across <strong>Taiwan</strong>, <strong>Hong Kong</strong>, and <strong>Boston</strong>. As an exchange student at the Hong Kong University of Science and Technology, I developed cross-cultural communication skills that serve me well in diverse team environments.
+                Outside of work and analytics, I spend my time chasing elevation and endurance. I've completed the <strong>half Taipei Marathon</strong>, summited over <strong>20 peaks above 10,000 feet</strong> across Taiwan's mountain ranges, and picked up <strong>snowboarding</strong> after moving to Boston.
               </p>
               <p>
-                I'm driven by curiosity — whether it's exploring a new city, diving into a challenging dataset, or learning a new framework. I believe the best analysts combine <strong>technical rigor</strong> with <strong>creative problem-solving</strong> and genuine empathy for end users.
-              </p>
-              <p>
-                I'm enthusiastic about applying my analytical skills and banking industry experience to drive <strong>data-driven innovation</strong> in business analytics, risk management, and beyond.
+                Whether it's pushing through the final kilometers of a race, navigating a steep ridge, or linking turns on a snowy slope, these experiences teach me <strong>patience</strong>, <strong>adaptability</strong>, and how to stay focused when things get uncomfortable. They also remind me why curiosity matters — and I bring that same energy back to my work every day.
               </p>
             </div>
           </div>
