@@ -37,6 +37,96 @@ a:hover {
   padding: 60px 0;
 }
 
+/* Home page card-block sections */
+.home-card-block {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 2rem 0;
+  min-height: 480px;
+  background: #f0ebe4;
+}
+
+.home-card-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.home-card-images {
+  flex: 0 0 50%;
+  display: grid;
+  min-height: 480px;
+}
+
+.home-card-images.grid-2x2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.home-card-images.grid-top-split {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.home-card-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-card-images .img-span-full {
+  grid-column: 1 / -1;
+}
+
+.home-card-text-side {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.home-card-text-inner {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  border-radius: 14px;
+  padding: 2rem 2.25rem;
+  width: 100%;
+}
+
+.home-card-text-inner .section-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+
+.home-card-text-inner .section-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #1a1a1a;
+}
+
+@media (max-width: 767.98px) {
+  .home-card-block,
+  .home-card-block.reverse {
+    flex-direction: column;
+  }
+
+  .home-card-images {
+    flex: none;
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .home-card-text-side {
+    flex: none;
+    padding: 1.5rem;
+  }
+}
+
 /* Eyebrow label (small muted text above main heading) */
 .eyebrow {
   font-size: 1.1rem;
