@@ -32,8 +32,16 @@ const Projects = () => {
               href="https://medium.com/@jhuangbp/predicting-movie-rating-from-multimodal-data-a-deep-learning-method-a35f8e85f0e5"
               target="_blank"
               rel="noopener noreferrer"
+              className="mr-3"
             >
-              learn more
+              Report
+            </a>
+            <a
+              href="https://public.tableau.com/app/profile/jyun.ru.huang/viz/Movie_Tableau_17705931201140/Story1?publish=yes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tableau EDA Dashboard
             </a>
           </div>
         </div>
