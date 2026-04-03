@@ -90,7 +90,7 @@ const Projects = () => {
         <div className="row align-items-center">
           <div className="col-md-5">
             <img
-              src={withBase('Military_Slot_project_banner%20.png')}
+              src={withBase('Military_Slot_project_banner.png')}
               className="img-fluid"
               alt="U.S. Military Base Slot Machine Revenue Explorer"
             />
