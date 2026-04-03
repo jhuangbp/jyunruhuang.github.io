@@ -67,7 +67,7 @@ const Projects = () => {
               <strong>Achievement:</strong> AUC of <strong>0.96</strong> for inflow and <strong>0.72</strong> for outflow, outperforming comparable models in prior literature.
             </p>
             <a
-              href={withBase('HealthcareProject_Final%20Presentation.pdf')}
+              href={withBase('HealthcareProject_Final Presentation.pdf')}
               target="_blank"
               rel="noopener noreferrer"
               className="mr-3"
@@ -75,7 +75,7 @@ const Projects = () => {
               presentation
             </a>
             <a
-              href={withBase('HealthcareProject_Final%20Report.pdf')}
+              href={withBase('HealthcareProject_Final Report.pdf')}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -121,7 +121,7 @@ const Projects = () => {
               github
             </a>
             <a
-              href={withBase('Muckrock%20Final%20Report.pdf')}
+              href={withBase('Muckrock Final Report.pdf')}
               target="_blank"
               rel="noopener noreferrer"
             >
