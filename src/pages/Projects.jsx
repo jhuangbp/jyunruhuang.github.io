@@ -23,7 +23,10 @@ const Projects = () => {
             <h2>Predicting Movie Ratings from Multimodal Data</h2>
             <h5>Deep Learning · Python · PyTorch</h5>
             <p>
-              Consolidated 4,800+ films across nearly 40 years from three film databases and built a multi-page interactive Tableau dashboard with dimensional filters, trend lines, and distribution analysis. Extended EDA findings on studio release strategies in seasonality, budget allocation, and runtime positioning into a multimodal deep learning framework built in PyTorch and trained on NVIDIA A100 GPU.
+              Consolidated 4,800+ films across nearly 40 years from three film databases and built a multi-page interactive Tableau dashboard with dimensional filters, trend lines, and distribution analysis.
+            </p>
+            <p>
+              Extended EDA findings on studio release strategies in seasonality, budget allocation, and runtime positioning into a multimodal deep learning framework built in PyTorch and trained on NVIDIA A100 GPU.
             </p>
             <p>
               <strong>Achievement:</strong>
