@@ -119,7 +119,7 @@ const Projects = () => {
               live dashboard
             </a>
             <a
-              href="https://github.com/BU-Spark/ds-muckrock-liberation"
+              href="https://github.com/jhuangbp/muckrock-liberation"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-3"
