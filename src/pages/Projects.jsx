@@ -102,7 +102,17 @@ const Projects = () => {
             />
           </div>
           <div className="col-md-7">
-    <h2>AI Agent-Driven Military Slot Revenue PDF Extractor</h2> <h5>AI Agents · Document Intelligence · Python · SQL · Datasette</h5> <p> Supported MuckRock, a nonprofit investigative journalism organization, by building an AI agent-based workflow to extract and structure publicly released U.S. military slot machine revenue, location, and related records from complex PDF documents with irregular, borderless tables. </p> <p> The workflow used parallel AI agents to generate and test alternative PDF extraction scripts across different layout-parsing and table-detection strategies. An agent-led feedback loop then benchmarked script outputs, identified stronger parsing logic, and generated refined versions for more reliable extraction. </p> <p> <strong>Achievement:</strong> Processed and structured <strong>500+ pages of PDF records</strong> into analysis-ready datasets and deployed the results to an interactive SQLite-backed Datasette web dashboard. </p>
+            <h2>AI Agent-Driven Military Slot Revenue PDF Extractor</h2>
+            <h5>AI Agents · Document Intelligence · Python · SQL · Datasette</h5>
+            <p>
+              Supported MuckRock, a nonprofit investigative journalism organization, by building an AI agent-based workflow to extract and structure publicly released U.S. military slot machine revenue, location, and related records from complex PDF documents with irregular, borderless tables.
+            </p>
+            <p>
+              The workflow used parallel AI agents to generate and test alternative PDF extraction scripts across different layout-parsing and table-detection strategies. An agent-led feedback loop then benchmarked script outputs, identified stronger parsing logic, and generated refined versions for more reliable extraction.
+            </p>
+            <p>
+              <strong>Achievement:</strong> Processed and structured <strong>500+ pages of PDF records</strong> into analysis-ready datasets and deployed the results to an interactive SQLite-backed Datasette web dashboard.
+            </p>
             <a
               href="https://ds-701-muckrock-data-liberation-project.onrender.com"
               target="_blank"
