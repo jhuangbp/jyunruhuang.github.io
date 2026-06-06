@@ -105,10 +105,10 @@ const Projects = () => {
             <h2>AI Agent-Driven Military Slot Revenue PDF Extractor</h2>
             <h5>AI Agents · Document Intelligence · Python · SQL · Datasette</h5>
             <p>
-              Supported MuckRock, a nonprofit investigative journalism organization, by building an AI agent-based workflow to extract and structure publicly released U.S. military slot machine revenue, location, and related records from complex PDF documents with irregular, borderless tables.
+              Supported MuckRock by developing an AI agent-based workflow to extract U.S. military slot machine revenue, location, and related records from irregular, borderless PDF tables.
             </p>
             <p>
-              The workflow used parallel AI agents to generate and test alternative PDF extraction scripts across different layout-parsing and table-detection strategies. An agent-led feedback loop then benchmarked script outputs, identified stronger parsing logic, and generated refined versions for more reliable extraction.
+              The workflow used parallel AI agents to generate, test, and refine PDF extraction scripts, with feedback loops identifying stronger parsing logic to improve extraction reliability.
             </p>
             <p>
               <strong>Achievement:</strong> Processed and structured <strong>500+ pages of PDF records</strong> into analysis-ready datasets and deployed the results to an interactive SQLite-backed Datasette web dashboard.
